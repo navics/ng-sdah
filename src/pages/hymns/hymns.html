@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>hymns</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<audio [src]="midiUrl" id="audioMidi"></audio> 
+<ion-content padding>
+  <button ion-button color="light" (click)="playMidi()">play</button>
+  <h2>{{ wholeHymn.title }} </h2>
+  <div [innerHTML]="wholeHymn.body"></div>
+</ion-content>

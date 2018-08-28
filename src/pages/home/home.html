@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!--ion-grid>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Email</ion-label>
+      <ion-input type="email" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>DOB</ion-label>
+      <ion-input type="date" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+
+  <h2>Welcome Again!</h2>
+    <ion-row>
+      <ion-col col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4>
+        <button (click)="update()" ion-button color="light">Show Updates</button>
+      </ion-col>
+      <ion-col col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4>
+        <button (click)="presentLoading()" ion-button color="secondary">Present loading</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid-->
+
+  <ion-card color="secondary" (swipe)="readBib($event)">
+    <ion-card-header>
+      <h2>Daily bible reading :)</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Add card content here! -->
+      {{ bibleText }}
+      <ion-spinner></ion-spinner>
+
+      <br/>
+      <br/>
+      <button (click)="readBib()" ion-button color="light">Read Now</button>
+    </ion-card-content>
+    <ion-item>
+
+      <ion-label>
+        <small>Always Show this on startup</small>
+      </ion-label>
+      <ion-checkbox color="green" checked="true"></ion-checkbox>
+    </ion-item>
+  </ion-card>
+
+
+
+</ion-content>

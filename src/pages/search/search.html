@@ -1,0 +1,33 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>search</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-card *ngIf="hy">
+    <ion-card-content>
+      <ion-card-title (click)="goToOtherPage(hy)">
+          <small>{{ hy.number }} </small> {{ hy.title }}
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let item of multiHy">
+    <ion-card-content>
+      <ion-card-title (click)="goToOtherPage(item)">
+          <small>{{ item.number }} </small> {{ item.title }}
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <hr/>
+<!--small>Polling Server for changes <ion-spinner></ion-spinner></small-->
+</ion-content>
